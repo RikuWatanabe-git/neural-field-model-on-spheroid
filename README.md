@@ -13,11 +13,11 @@ The surface discretization and area element computations on the triangular mesh 
 
 ### **Requirements**
 
-#### **Julia (tested on Julia x.x.x)**
+#### **Julia**
 - PyPlot  
 - DelimitedFiles  
 
-#### **Python (tested on Python x.x.x)**
+#### **Python**
 - NumPy  
 - SciPy  
 - Geographiclib  
@@ -26,7 +26,7 @@ Ensure these dependencies are installed before running the scripts.
 
 #### **Usage**
 
-Run distance_calculator.py first on Python, then run spheroid.jl on Julia.Model parameters can be changed by editing these scripts.
+Run distance_calculator.py first on Python, then run spheroid.jl on Julia. Model parameters can be changed by editing these scripts.
 
 ## Licence
 
