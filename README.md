@@ -17,14 +17,12 @@ The surface discretization and area element computations on the triangular mesh 
 - PyCall
 - PyPlot
 - DelimitedFiles
-- Base.Threads
 - LinearAlgebra
 - Colors
 
 #### **Python**
 - NumPy  
 - SciPy
-- matplotlib
 - geographiclib  
 
 Ensure these dependencies are installed before running the scripts.
