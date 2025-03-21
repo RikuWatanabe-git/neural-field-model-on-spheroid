@@ -29,7 +29,7 @@ Ensure these dependencies are installed before running the scripts.
 
 #### **Usage**
 
-Run distance_calculator.py first on Python, then run spheroid.jl on Julia. Model parameters can be changed by editing these scripts.
+Run distance_calculator.jl first, then run spheroid.jl. Model parameters can be changed by editing these scripts.
 
 ## References
 1. H. Ishii and R. Watanabe <br>
