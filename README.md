@@ -33,7 +33,7 @@ Run distance_calculator.py first on Python, then run spheroid.jl on Julia. Model
 
 ## References
 1. H. Ishii and R. Watanabe <br>
-"Stationary spot solutions to a neural field equation on oblate spheroids" (preprint) <br>
+"Spot solutions to a neural field equation on oblate spheroids" (preprint) <br>
 
 2. R. Nishide and S. Ishihara <br>
 "Pattern Propagation Driven by Surface Curvature"<br>
