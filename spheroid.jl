@@ -113,7 +113,6 @@ def scatter_plot(U_time,tt,count,points_3d,R1,R2,dt,vmin,vmax):
     ax3d.set_box_aspect((1,1,1))
     ax3d.view_init(elev=19, azim=-10)
     ax3d.set_title(f'time: {tt*dt:.2f}:, max index: {np.argmax(U_time[count-1]):.2f}, max: {np.max(U_time[count-1]):.2f}, min: {np.min(U_time[count-1]):.2f}')
-    plt.show()
     plt.pause(0.001)
 """
 scatter_plot=py"scatter_plot"
