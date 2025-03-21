@@ -4,7 +4,7 @@ Solve neural field equations on oblate spheroids.
 
 ### **Description**
 
-This repository provides a numerical solver for the Amari neural field model on oblate spheroids with small flattening.  
+This repository provides a numerical solver for neural field equations on oblate spheroids with small flattening.  
 For details on the mathematical formulation and implementation, see Ref. [1].
 
 The code is based on the open code in Ref.[2].
