@@ -19,6 +19,7 @@ The surface discretization and area element computations on the triangular mesh 
 - DelimitedFiles
 - Base.Threads
 - LinearAlgebra
+- Colors
 
 #### **Python**
 - NumPy  
