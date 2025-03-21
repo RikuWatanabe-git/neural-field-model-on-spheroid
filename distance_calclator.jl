@@ -4,10 +4,6 @@ using DelimitedFiles
 include("spheroid_mesh.jl")
 
 py"""
-# add the path to the geographiclib library
-import sys
-sys.path.append('/work/watanabe/virtual_env/env2/lib64/python3.11/site-packages')
-
 # Parameters for the surface; add points times : N, flattening : eps, semi-major axis : R1 R, semi-minor axis : R2
 N, R, eps = 5, 1.0, 0.01
 R1, R2 = R, R * (1 - eps)
