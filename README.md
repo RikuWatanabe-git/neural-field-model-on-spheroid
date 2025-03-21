@@ -41,4 +41,4 @@ Phys. Rev. Lett. 128, (2022), 224101 <br>
 
 3. G. Xu <br>
 "Discrete Laplace-Beltrami operator on sphere and optimal spherical triangulations"<br>
-Int. J. Comput. Geom. Appl. 16, p.75--93 (2006) <br>
+Int. J. Comput. Geom. Appl. 16, pp.75-93 (2006) <br>
