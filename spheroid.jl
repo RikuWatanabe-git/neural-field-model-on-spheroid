@@ -1,8 +1,8 @@
 using DelimitedFiles
-using PyCall
-using PyPlot
 using Base.Threads
 using LinearAlgebra
+using PyPlot
+using Colors
 
 # Import the spherical_mesh module
 include("spheroid_mesh.jl")
@@ -98,25 +98,20 @@ for i in 1:n
     U[i] = u_0(dist[29,i])
 end
 
-# Define plot function via PyCall
-py"""
-import numpy as np
-import matplotlib.pyplot as plt
-fig3d = plt.figure()
-ax3d = fig3d.add_subplot(111, projection='3d')
+PyPlot.ion()
+fig = figure()
+ax = fig.add_subplot(111, projection="3d")
 
-def scatter_plot(U_time,tt,count,points_3d,R1,R2,dt,vmin,vmax):
-    ax3d.cla()
-    lim=max(R1,R2)
-    ax3d.scatter3D(points_3d[:,0], points_3d[:,1], points_3d[:,2],
-                c=U_time[count-1],s=20, vmin=vmin, vmax=vmax) 
-    ax3d.set_xlim(-lim,lim), ax3d.set_ylim(-lim,lim), ax3d.set_zlim(-lim,lim)
-    ax3d.set_box_aspect((1,1,1))
-    ax3d.view_init(elev=19, azim=-10)
-    ax3d.set_title(f'time: {tt*dt:.2f}:, max index: {np.argmax(U_time[count-1]):.2f}, max: {np.max(U_time[count-1]):.2f}, min: {np.min(U_time[count-1]):.2f}')
-    plt.pause(0.001)
-"""
-scatter_plot=py"scatter_plot"
+function scatter_plot(U, points_3d, vmin, vmax)
+    ax.cla()
+    x, y, z = points_3d[:,1], points_3d[:,2], points_3d[:,3]
+    sc = ax.scatter(x, y, z, 
+                    c=U, cmap="viridis", vmin=vmin, vmax=vmax, 
+                    edgecolors="none", s=20)
+    ax.view_init(elev=19, azim=-10)
+    ax.set_box_aspect([1, 1, 1]) 
+    display(fig)
+end
 
 # Time evolution function
 function time_evolution(U, K_matrix, Areas, U_time, STEP)
@@ -125,7 +120,7 @@ function time_evolution(U, K_matrix, Areas, U_time, STEP)
 
         if tt % STEP == 0
             U_time[count, :] = U[:]
-            scatter_plot(U_time,tt,count,points_3d,R1,R2,dt,vmin,vmax)
+            scatter_plot(U, points_3d, vmin, vmax)
             println("printed time = $(tt),$(maximum(U)) $(minimum(U)) $(argmax(U)) $(argmin(U))")
             count += 1
         end
