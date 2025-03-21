@@ -15,6 +15,7 @@ The surface discretization and area element computations on the triangular mesh 
 
 #### **Julia**
 - PyCall
+- PyPlot
 - DelimitedFiles
 - Base.Threads
 - LinearAlgebra
