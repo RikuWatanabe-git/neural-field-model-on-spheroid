@@ -33,12 +33,13 @@ First, run distance_calculator.jl, then run spheroid.jl. Model parameters can be
 
 ## References
 1. H. Ishii and R. Watanabe <br>
-"Spot solutions to a neural field equation on oblate spheroids" (preprint) <br>
+"Spot solutions to a neural field equation on oblate spheroids"<br>
+Commun. Nonlinear Sci. Numer. Simul. 152, (2026) 109172 <br>
 
-2. R. Nishide and S. Ishihara <br>
+3. R. Nishide and S. Ishihara <br>
 "Pattern Propagation Driven by Surface Curvature"<br>
 Phys. Rev. Lett. 128, (2022), 224101 <br>
 
-3. G. Xu <br>
+4. G. Xu <br>
 "Discrete Laplace-Beltrami operator on sphere and optimal spherical triangulations"<br>
 Int. J. Comput. Geom. Appl. 16, pp.75-93 (2006) <br>
